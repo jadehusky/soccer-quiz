@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teen Soccer Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="quiz-hero" aria-label="Soccer quiz">
+        <div class="pitch-art" aria-hidden="true">
+          <svg viewBox="0 0 920 420" role="img">
+            <defs>
+              <pattern id="grass" width="72" height="72" patternUnits="userSpaceOnUse">
+                <rect width="72" height="72" fill="#17794a"></rect>
+                <rect width="36" height="72" fill="#1d8754"></rect>
+              </pattern>
+            </defs>
+            <rect class="pitch-bg" width="920" height="420" rx="28"></rect>
+            <rect class="pitch-line" x="42" y="42" width="836" height="336" rx="10"></rect>
+            <line class="pitch-line" x1="460" y1="42" x2="460" y2="378"></line>
+            <circle class="pitch-line no-fill" cx="460" cy="210" r="68"></circle>
+            <circle class="pitch-dot" cx="460" cy="210" r="5"></circle>
+            <rect class="pitch-line" x="42" y="130" width="98" height="160"></rect>
+            <rect class="pitch-line" x="780" y="130" width="98" height="160"></rect>
+            <path class="ball-trail" d="M212 286 C330 145, 522 120, 714 190"></path>
+            <g class="soccer-ball" transform="translate(708 176)">
+              <circle cx="0" cy="0" r="34" fill="#f7f7f2"></circle>
+              <polygon points="0,-14 14,-4 9,13 -9,13 -14,-4" fill="#222"></polygon>
+              <path d="M0 -34 L0 -14 M14 -4 L31 -12 M9 13 L20 28 M-9 13 L-20 28 M-14 -4 L-31 -12" stroke="#222" stroke-width="3" fill="none"></path>
+            </g>
+          </svg>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Built by a teen, made for match-day brains</p>
+          <h1>Soccer IQ Challenge</h1>
+          <p class="hero-copy">Pick your answers, build a streak, and see whether your football knowledge is academy-ready.</p>
+        </div>
+      </section>
+
+      <section class="game-panel" aria-live="polite">
+        <div class="status-bar">
+          <div>
+            <span class="label">Question</span>
+            <strong id="question-count">Ready</strong>
+          </div>
+          <div>
+            <span class="label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span class="label">Streak</span>
+            <strong id="streak">0</strong>
+          </div>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <div id="start-screen" class="screen active">
+          <div class="intro-layout">
+            <div>
+              <h2>Choose your mode</h2>
+              <p>Warm up with club facts, legends, rules, and big tournament moments.</p>
+            </div>
+            <div class="mode-grid" role="group" aria-label="Quiz mode">
+              <button class="mode-button selected" type="button" data-mode="mixed">
+                <span>Mixed</span>
+                <small>Everything</small>
+              </button>
+              <button class="mode-button" type="button" data-mode="clubs">
+                <span>Clubs</span>
+                <small>Kits, grounds, rivalries</small>
+              </button>
+              <button class="mode-button" type="button" data-mode="legends">
+                <span>Legends</span>
+                <small>Icons and records</small>
+              </button>
+              <button class="mode-button" type="button" data-mode="rules">
+                <span>Rules</span>
+                <small>Referee brain</small>
+              </button>
+            </div>
+          </div>
+          <button id="start-button" class="primary-action" type="button">Start quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+          <div class="question-meta">
+            <span id="category-pill" class="category-pill">Mixed</span>
+            <span id="difficulty">Starter</span>
+          </div>
+          <h2 id="question-text">Question text</h2>
+          <div id="answers" class="answer-grid"></div>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="next-button" class="primary-action hidden" type="button">Next question</button>
+        </div>
+
+        <div id="result-screen" class="screen">
+          <p class="eyebrow">Full time</p>
+          <h2 id="result-title">Final score</h2>
+          <p id="result-message"></p>
+          <div class="result-stats">
+            <div>
+              <span class="label">Correct</span>
+              <strong id="final-score">0 / 10</strong>
+            </div>
+            <div>
+              <span class="label">Best streak</span>
+              <strong id="best-streak">0</strong>
+            </div>
+          </div>
+          <button id="play-again-button" class="primary-action" type="button">Play again</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
