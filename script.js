@@ -1,101 +1,5 @@
-const questionBank = [
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which club is known as The Red Devils?",
-    answers: ["Manchester United", "Liverpool", "Arsenal", "Bayern Munich"],
-    correct: 0,
-    fact: "Manchester United picked up the nickname in the 1960s."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which Spanish club plays home matches at Camp Nou?",
-    answers: ["Atletico Madrid", "Real Betis", "FC Barcelona", "Sevilla"],
-    correct: 2,
-    fact: "Barcelona's famous stadium has hosted generations of elite players."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which club won the first Premier League season in 1992-93?",
-    answers: ["Blackburn Rovers", "Manchester United", "Arsenal", "Leeds United"],
-    correct: 1,
-    fact: "United won the first Premier League title under Sir Alex Ferguson."
-  },
-  {
-    category: "legends",
-    difficulty: "Starter",
-    question: "Who is often called CR7?",
-    answers: ["Cristiano Ronaldo", "Carlos Rodriguez", "Cafu", "Claude Makelele"],
-    correct: 0,
-    fact: "The nickname mixes Cristiano Ronaldo's initials with his famous shirt number."
-  },
-  {
-    category: "legends",
-    difficulty: "Pro",
-    question: "Which goalkeeper was nicknamed The Spider-Man?",
-    answers: ["Manuel Neuer", "Gianluigi Buffon", "Lev Yashin", "Hugo Lloris"],
-    correct: 2,
-    fact: "Lev Yashin remains the only goalkeeper to win the Ballon d'Or."
-  },
-  {
-    category: "legends",
-    difficulty: "Elite",
-    question: "Which country did Marta, one of football's greatest forwards, represent?",
-    answers: ["Brazil", "Spain", "Canada", "France"],
-    correct: 0,
-    fact: "Marta became a global icon for Brazil and women's football."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "How many players does a soccer team usually start with on the field?",
-    answers: ["9", "10", "11", "12"],
-    correct: 2,
-    fact: "A standard team starts with 11 players, including one goalkeeper."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "A player is offside only when they are involved in active play and are closer to goal than the ball and the second-last defender. What else must be true?",
-    answers: ["They are in their own half", "They receive the ball from a teammate", "They are taking a corner", "They are the goalkeeper"],
-    correct: 1,
-    fact: "Offside position matters when a teammate plays or touches the ball."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "What color card means a player is sent off?",
-    answers: ["Blue", "Yellow", "Green", "Red"],
-    correct: 3,
-    fact: "A red card means the player leaves the match and cannot be replaced."
-  },
-  {
-    category: "mixed",
-    difficulty: "Pro",
-    question: "What is a hat trick?",
-    answers: ["Three goals by one player", "Three saves in a row", "Winning three trophies", "Three yellow cards"],
-    correct: 0,
-    fact: "A hat trick is three goals scored by the same player in one match."
-  },
-  {
-    category: "mixed",
-    difficulty: "Elite",
-    question: "Which nation won the 2022 men's FIFA World Cup?",
-    answers: ["France", "Argentina", "Croatia", "Morocco"],
-    correct: 1,
-    fact: "Argentina beat France in a dramatic final in Qatar."
-  },
-  {
-    category: "mixed",
-    difficulty: "Elite",
-    question: "Which tournament is awarded to the best clubs in Europe each season?",
-    answers: ["Copa America", "UEFA Champions League", "Gold Cup", "AFC Asian Cup"],
-    correct: 1,
-    fact: "The Champions League is Europe's top annual club competition."
-  }
-];
+const questionBank = window.questionBank || [];
+const quizLength = 15;
 
 const state = {
   mode: "mixed",
@@ -147,7 +51,7 @@ function startQuiz() {
     ? questionBank
     : questionBank.filter((item) => item.category === state.mode);
 
-  state.selectedQuestions = shuffle(pool).slice(0, Math.min(10, pool.length));
+  state.selectedQuestions = shuffle(pool).slice(0, Math.min(quizLength, pool.length));
   state.current = 0;
   state.score = 0;
   state.streak = 0;

@@ -64,7 +64,7 @@
           <div class="intro-layout">
             <div>
               <h2>Choose your mode</h2>
-              <p>Warm up with club facts, legends, rules, and big tournament moments.</p>
+              <p>Warm up with clubs, players, tournaments, rules, and classic football history.</p>
             </div>
             <div class="mode-grid" role="group" aria-label="Quiz mode">
               <button class="mode-button selected" type="button" data-mode="mixed">
@@ -75,13 +75,21 @@
                 <span>Clubs</span>
                 <small>Kits, grounds, rivalries</small>
               </button>
-              <button class="mode-button" type="button" data-mode="legends">
-                <span>Legends</span>
-                <small>Icons and records</small>
+              <button class="mode-button" type="button" data-mode="players">
+                <span>Players</span>
+                <small>Stars, awards, records</small>
+              </button>
+              <button class="mode-button" type="button" data-mode="tournaments">
+                <span>Tournaments</span>
+                <small>World Cup and cups</small>
               </button>
               <button class="mode-button" type="button" data-mode="rules">
                 <span>Rules</span>
                 <small>Referee brain</small>
+              </button>
+              <button class="mode-button" type="button" data-mode="history">
+                <span>History</span>
+                <small>Classic moments</small>
               </button>
             </div>
           </div>
@@ -106,7 +114,7 @@
           <div class="result-stats">
             <div>
               <span class="label">Correct</span>
-              <strong id="final-score">0 / 10</strong>
+              <strong id="final-score">0 / 15</strong>
             </div>
             <div>
               <span class="label">Best streak</span>
@@ -118,6 +126,7 @@
       </section>
     </main>
 
+    <script src="question-bank.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
