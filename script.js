@@ -10,15 +10,16 @@ const state = {
   selectedQuestions: []
 };
 
-const startScreen = document.getElementById("start-screen");
+const coverScreen = document.getElementById("cover-screen");
+const gameScreen = document.getElementById("game-screen");
 const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 const modeButtons = document.querySelectorAll(".mode-button");
-const startButton = document.getElementById("start-button");
+const backButton = document.getElementById("back-button");
 const nextButton = document.getElementById("next-button");
 const playAgainButton = document.getElementById("play-again-button");
+const activeModeLabel = document.getElementById("active-mode-label");
 const questionCount = document.getElementById("question-count");
-const score = document.getElementById("score");
 const streak = document.getElementById("streak");
 const progressBar = document.getElementById("progress-bar");
 const categoryPill = document.getElementById("category-pill");
@@ -34,17 +35,13 @@ const bestStreak = document.getElementById("best-streak");
 modeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     state.mode = button.dataset.mode;
-    modeButtons.forEach((item) => item.classList.remove("selected"));
-    button.classList.add("selected");
+    startQuiz();
   });
 });
 
-startButton.addEventListener("click", startQuiz);
+backButton.addEventListener("click", showCover);
 nextButton.addEventListener("click", goNext);
-playAgainButton.addEventListener("click", () => {
-  showScreen(startScreen);
-  updateStats();
-});
+playAgainButton.addEventListener("click", showCover);
 
 function startQuiz() {
   const pool = state.mode === "mixed"
@@ -57,7 +54,8 @@ function startQuiz() {
   state.streak = 0;
   state.bestStreak = 0;
 
-  showScreen(quizScreen);
+  activeModeLabel.textContent = labelFor(state.mode);
+  showGameScreen(quizScreen);
   renderQuestion();
 }
 
@@ -148,16 +146,27 @@ function showResults() {
     resultMessage.textContent = "Every legend starts somewhere. Pick a category and go again.";
   }
 
-  showScreen(resultScreen);
+  showGameScreen(resultScreen);
 }
 
-function showScreen(screen) {
-  [startScreen, quizScreen, resultScreen].forEach((item) => item.classList.remove("active"));
+function showCover() {
+  coverScreen.classList.add("active");
+  gameScreen.classList.remove("active");
+  progressBar.style.width = "0%";
+  questionCount.textContent = "Ready";
+  state.score = 0;
+  state.streak = 0;
+  updateStats();
+}
+
+function showGameScreen(screen) {
+  coverScreen.classList.remove("active");
+  gameScreen.classList.add("active");
+  [quizScreen, resultScreen].forEach((item) => item.classList.remove("active"));
   screen.classList.add("active");
 }
 
 function updateStats() {
-  score.textContent = state.score;
   streak.textContent = state.streak;
 }
 

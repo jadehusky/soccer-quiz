@@ -8,7 +8,7 @@
   </head>
   <body>
     <main class="app-shell">
-      <section class="quiz-hero" aria-label="Soccer quiz">
+      <section id="cover-screen" class="quiz-hero screen active" aria-label="Soccer quiz categories">
         <div class="pitch-art" aria-hidden="true">
           <svg viewBox="0 0 920 420" role="img">
             <defs>
@@ -36,19 +36,50 @@
         <div class="hero-content">
           <p class="eyebrow">Built by a teen, made for match-day brains</p>
           <h1>Soccer IQ Challenge</h1>
-          <p class="hero-copy">Pick your answers, build a streak, and see whether your football knowledge is academy-ready.</p>
+          <p class="hero-copy">Choose a category and jump straight into a focused football quiz.</p>
+        </div>
+
+        <div class="cover-categories">
+          <h2>Choose your mode</h2>
+          <div class="mode-grid" role="group" aria-label="Quiz mode">
+            <button class="mode-button" type="button" data-mode="mixed">
+              <span>Mixed</span>
+              <small>Everything</small>
+            </button>
+            <button class="mode-button" type="button" data-mode="clubs">
+              <span>Clubs</span>
+              <small>Kits, grounds, rivalries</small>
+            </button>
+            <button class="mode-button" type="button" data-mode="players">
+              <span>Players</span>
+              <small>Stars, awards, records</small>
+            </button>
+            <button class="mode-button" type="button" data-mode="tournaments">
+              <span>Tournaments</span>
+              <small>World Cup and cups</small>
+            </button>
+            <button class="mode-button" type="button" data-mode="rules">
+              <span>Rules</span>
+              <small>Referee brain</small>
+            </button>
+            <button class="mode-button" type="button" data-mode="history">
+              <span>History</span>
+              <small>Classic moments</small>
+            </button>
+          </div>
         </div>
       </section>
 
-      <section class="game-panel" aria-live="polite">
+      <section id="game-screen" class="game-panel screen" aria-live="polite">
+        <div class="quiz-topline">
+          <button id="back-button" class="ghost-action" type="button">Categories</button>
+          <span id="active-mode-label">Mixed</span>
+        </div>
+
         <div class="status-bar">
           <div>
             <span class="label">Question</span>
             <strong id="question-count">Ready</strong>
-          </div>
-          <div>
-            <span class="label">Score</span>
-            <strong id="score">0</strong>
           </div>
           <div>
             <span class="label">Streak</span>
@@ -60,43 +91,7 @@
           <div id="progress-bar" class="progress-bar"></div>
         </div>
 
-        <div id="start-screen" class="screen active">
-          <div class="intro-layout">
-            <div>
-              <h2>Choose your mode</h2>
-              <p>Warm up with clubs, players, tournaments, rules, and classic football history.</p>
-            </div>
-            <div class="mode-grid" role="group" aria-label="Quiz mode">
-              <button class="mode-button selected" type="button" data-mode="mixed">
-                <span>Mixed</span>
-                <small>Everything</small>
-              </button>
-              <button class="mode-button" type="button" data-mode="clubs">
-                <span>Clubs</span>
-                <small>Kits, grounds, rivalries</small>
-              </button>
-              <button class="mode-button" type="button" data-mode="players">
-                <span>Players</span>
-                <small>Stars, awards, records</small>
-              </button>
-              <button class="mode-button" type="button" data-mode="tournaments">
-                <span>Tournaments</span>
-                <small>World Cup and cups</small>
-              </button>
-              <button class="mode-button" type="button" data-mode="rules">
-                <span>Rules</span>
-                <small>Referee brain</small>
-              </button>
-              <button class="mode-button" type="button" data-mode="history">
-                <span>History</span>
-                <small>Classic moments</small>
-              </button>
-            </div>
-          </div>
-          <button id="start-button" class="primary-action" type="button">Start quiz</button>
-        </div>
-
-        <div id="quiz-screen" class="screen">
+        <div id="quiz-screen" class="screen active">
           <div class="question-meta">
             <span id="category-pill" class="category-pill">Mixed</span>
             <span id="difficulty">Starter</span>

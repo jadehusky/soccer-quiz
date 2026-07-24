@@ -39,7 +39,7 @@ button {
 
 .quiz-hero {
   position: relative;
-  min-height: 340px;
+  min-height: 620px;
   overflow: hidden;
   border-radius: 8px;
   color: #ffffff;
@@ -99,6 +99,23 @@ button {
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.32);
 }
 
+.cover-categories {
+  position: relative;
+  z-index: 1;
+  width: min(780px, calc(100% - 84px));
+  margin: 18px 42px 42px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+}
+
+.cover-categories h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
 .eyebrow {
   margin: 0 0 10px;
   color: inherit;
@@ -137,8 +154,7 @@ h2 {
 
 .game-panel {
   position: relative;
-  z-index: 2;
-  margin: -48px auto 0;
+  margin: 32px auto 0;
   width: min(940px, calc(100% - 28px));
   padding: 22px;
   border: 1px solid var(--line);
@@ -148,11 +164,29 @@ h2 {
   backdrop-filter: blur(14px);
 }
 
+.quiz-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.quiz-topline span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
 .status-bar,
 .result-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+}
+
+.status-bar,
+.result-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .status-bar > div,
@@ -201,14 +235,6 @@ strong {
   display: block;
 }
 
-.intro-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: 22px;
-  align-items: start;
-}
-
-.intro-layout p,
 #result-message,
 .feedback {
   color: var(--muted);
@@ -224,7 +250,8 @@ strong {
 
 .mode-button,
 .answer-button,
-.primary-action {
+.primary-action,
+.ghost-action {
   min-height: 48px;
   border: 0;
   border-radius: 8px;
@@ -240,20 +267,26 @@ strong {
   background: #edf4f0;
 }
 
+.cover-categories .mode-button {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.92);
+}
+
 .mode-button:hover,
 .answer-button:not(:disabled):hover,
-.primary-action:hover {
+.primary-action:hover,
+.ghost-action:hover {
   transform: translateY(-1px);
 }
 
 .mode-button:focus-visible,
 .answer-button:focus-visible,
-.primary-action:focus-visible {
+.primary-action:focus-visible,
+.ghost-action:focus-visible {
   outline: 3px solid var(--sun);
   outline-offset: 3px;
 }
 
-.mode-button.selected,
 .answer-button.correct {
   color: #ffffff;
   background: var(--grass);
@@ -289,6 +322,13 @@ strong {
   font-weight: 800;
   background: var(--ink);
   box-shadow: 0 12px 24px rgba(23, 33, 28, 0.18);
+}
+
+.ghost-action {
+  padding: 0 16px;
+  color: var(--ink);
+  font-weight: 800;
+  background: #edf4f0;
 }
 
 .primary-action.hidden {
@@ -328,7 +368,6 @@ strong {
 }
 
 .result-stats {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 18px;
 }
 
@@ -339,20 +378,25 @@ strong {
   }
 
   .quiz-hero {
-    min-height: 310px;
+    min-height: 650px;
   }
 
   .hero-content {
     padding: 28px;
   }
 
-  .game-panel {
-    width: calc(100% - 14px);
-    margin-top: -34px;
+  .cover-categories {
+    width: calc(100% - 56px);
+    margin: 4px 28px 28px;
     padding: 16px;
   }
 
-  .intro-layout,
+  .game-panel {
+    width: calc(100% - 14px);
+    margin-top: 18px;
+    padding: 16px;
+  }
+
   .mode-grid,
   .answer-grid,
   .status-bar,
