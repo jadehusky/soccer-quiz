@@ -7,7 +7,8 @@ const state = {
   score: 0,
   streak: 0,
   bestStreak: 0,
-  selectedQuestions: []
+  selectedQuestions: [],
+  currentAnswers: []
 };
 
 const coverScreen = document.getElementById("cover-screen");
@@ -71,12 +72,18 @@ function renderQuestion() {
   feedback.textContent = "";
   nextButton.classList.add("hidden");
   answers.innerHTML = "";
+  state.currentAnswers = shuffle(
+    item.answers.map((answer, index) => ({
+      text: answer,
+      isCorrect: index === item.correct
+    }))
+  );
 
-  item.answers.forEach((answer, index) => {
+  state.currentAnswers.forEach((answer, index) => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "answer-button";
-    button.textContent = answer;
+    button.textContent = answer.text;
     button.addEventListener("click", () => chooseAnswer(index));
     answers.appendChild(button);
   });
@@ -87,11 +94,12 @@ function renderQuestion() {
 function chooseAnswer(index) {
   const item = state.selectedQuestions[state.current];
   const buttons = answers.querySelectorAll(".answer-button");
-  const isCorrect = index === item.correct;
+  const isCorrect = state.currentAnswers[index].isCorrect;
+  const correctIndex = state.currentAnswers.findIndex((answer) => answer.isCorrect);
 
   buttons.forEach((button, buttonIndex) => {
     button.disabled = true;
-    if (buttonIndex === item.correct) {
+    if (buttonIndex === correctIndex) {
       button.classList.add("correct");
     } else if (buttonIndex === index) {
       button.classList.add("wrong");
