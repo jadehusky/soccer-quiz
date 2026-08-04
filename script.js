@@ -8,7 +8,8 @@ const state = {
   streak: 0,
   bestStreak: 0,
   selectedQuestions: [],
-  currentAnswers: []
+  currentAnswers: [],
+  questionQueues: {}
 };
 
 const coverScreen = document.getElementById("cover-screen");
@@ -42,14 +43,12 @@ modeButtons.forEach((button) => {
 
 backButton.addEventListener("click", showCover);
 nextButton.addEventListener("click", goNext);
-playAgainButton.addEventListener("click", showCover);
+playAgainButton.addEventListener("click", startQuiz);
 
 function startQuiz() {
-  const pool = state.mode === "mixed"
-    ? questionBank
-    : questionBank.filter((item) => item.category === state.mode);
+  const pool = getQuestionPool(state.mode);
 
-  state.selectedQuestions = shuffle(pool).slice(0, Math.min(quizLength, pool.length));
+  state.selectedQuestions = takeQuestionsForMode(state.mode, pool);
   state.current = 0;
   state.score = 0;
   state.streak = 0;
@@ -176,6 +175,37 @@ function showGameScreen(screen) {
 
 function updateStats() {
   streak.textContent = state.streak;
+}
+
+function getQuestionPool(mode) {
+  return mode === "mixed"
+    ? questionBank
+    : questionBank.filter((item) => item.category === mode);
+}
+
+function takeQuestionsForMode(mode, pool) {
+  const count = Math.min(quizLength, pool.length);
+  const selected = [];
+
+  if (!state.questionQueues[mode]) {
+    state.questionQueues[mode] = shuffle(pool);
+  }
+
+  while (selected.length < count) {
+    if (state.questionQueues[mode].length === 0) {
+      const selectedKeys = new Set(selected.map(getQuestionKey));
+      const refillPool = pool.filter((item) => !selectedKeys.has(getQuestionKey(item)));
+      state.questionQueues[mode] = shuffle(refillPool.length > 0 ? refillPool : pool);
+    }
+
+    selected.push(state.questionQueues[mode].shift());
+  }
+
+  return selected;
+}
+
+function getQuestionKey(item) {
+  return `${item.category}:${item.question}`;
 }
 
 function shuffle(items) {
