@@ -1,802 +1,245 @@
-window.questionBank = [
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which club is known as The Red Devils?",
-    answers: ["Manchester United", "Liverpool", "Arsenal", "Bayern Munich"],
-    correct: 0,
-    fact: "Manchester United has used The Red Devils nickname for decades."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which Spanish club plays home matches at Camp Nou?",
-    answers: ["Atletico Madrid", "Real Betis", "FC Barcelona", "Sevilla"],
-    correct: 2,
-    fact: "Camp Nou is strongly associated with FC Barcelona."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which Italian club is nicknamed The Old Lady?",
-    answers: ["Napoli", "Juventus", "Roma", "Lazio"],
-    correct: 1,
-    fact: "Juventus is one of Italy's most decorated clubs."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which club wears a famous red home kit and sings You'll Never Walk Alone?",
-    answers: ["Chelsea", "Liverpool", "Tottenham", "Everton"],
-    correct: 1,
-    fact: "Liverpool fans are famous for singing You'll Never Walk Alone at Anfield."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which club is known for the yellow wall at Signal Iduna Park?",
-    answers: ["Borussia Dortmund", "RB Leipzig", "Bayer Leverkusen", "Schalke"],
-    correct: 0,
-    fact: "Dortmund's south stand is one of football's loudest fan sections."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which London club is nicknamed The Gunners?",
-    answers: ["Chelsea", "Arsenal", "West Ham", "Crystal Palace"],
-    correct: 1,
-    fact: "Arsenal's nickname comes from the club's roots near a weapons factory."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which club plays at the Santiago Bernabeu?",
-    answers: ["Real Madrid", "Valencia", "Villarreal", "Athletic Club"],
-    correct: 0,
-    fact: "The Bernabeu is Real Madrid's famous home stadium."
-  },
-  {
-    category: "clubs",
-    difficulty: "Starter",
-    question: "Which club is nicknamed The Blues and plays at Stamford Bridge?",
-    answers: ["Chelsea", "Leicester City", "Everton", "Rangers"],
-    correct: 0,
-    fact: "Chelsea's home stadium is Stamford Bridge in west London."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which club won the first Premier League season in 1992-93?",
-    answers: ["Blackburn Rovers", "Manchester United", "Arsenal", "Leeds United"],
-    correct: 1,
-    fact: "Manchester United won the first Premier League title under Alex Ferguson."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which club is known as Los Colchoneros?",
-    answers: ["Atletico Madrid", "Real Madrid", "Sevilla", "Real Sociedad"],
-    correct: 0,
-    fact: "Atletico Madrid's nickname refers to old mattress patterns matching their stripes."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which club won the 2015-16 Premier League title in a famous underdog story?",
-    answers: ["Tottenham", "Leicester City", "Southampton", "West Ham"],
-    correct: 1,
-    fact: "Leicester City's title is one of the biggest surprises in modern football."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which Portuguese club is nicknamed The Eagles?",
-    answers: ["Benfica", "Porto", "Sporting CP", "Braga"],
-    correct: 0,
-    fact: "Benfica has an eagle as a major club symbol."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which club's home ground is the San Siro, shared with AC Milan?",
-    answers: ["Inter Milan", "Torino", "Fiorentina", "Genoa"],
-    correct: 0,
-    fact: "AC Milan and Inter Milan both play at San Siro."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which club is commonly called PSG?",
-    answers: ["Paris Saint-Germain", "Porto Sporting Group", "Parma Soccer Giants", "Prague Slavia Group"],
-    correct: 0,
-    fact: "PSG stands for Paris Saint-Germain."
-  },
-  {
-    category: "clubs",
-    difficulty: "Pro",
-    question: "Which club plays at Allianz Arena?",
-    answers: ["Bayern Munich", "Borussia Monchengladbach", "Hamburg", "Hertha Berlin"],
-    correct: 0,
-    fact: "Bayern Munich moved into Allianz Arena in 2005."
-  },
-  {
-    category: "clubs",
-    difficulty: "Elite",
-    question: "Which Dutch club is famous for its academy and total football tradition?",
-    answers: ["Ajax", "PSV", "Feyenoord", "AZ Alkmaar"],
-    correct: 0,
-    fact: "Ajax is famous for developing technical players through its academy."
-  },
-  {
-    category: "clubs",
-    difficulty: "Elite",
-    question: "Which Scottish rivalry is known as the Old Firm?",
-    answers: ["Celtic vs Rangers", "Hearts vs Hibernian", "Aberdeen vs Dundee", "Motherwell vs Kilmarnock"],
-    correct: 0,
-    fact: "Celtic and Rangers make up the Old Firm derby."
-  },
-  {
-    category: "clubs",
-    difficulty: "Elite",
-    question: "Which club won the 2004 UEFA Champions League under Jose Mourinho?",
-    answers: ["Porto", "Chelsea", "Inter Milan", "Monaco"],
-    correct: 0,
-    fact: "Porto's 2004 Champions League win helped make Mourinho a global name."
-  },
-  {
-    category: "clubs",
-    difficulty: "Elite",
-    question: "Which Argentine club is known for La Bombonera?",
-    answers: ["Boca Juniors", "River Plate", "Racing Club", "San Lorenzo"],
-    correct: 0,
-    fact: "La Bombonera is Boca Juniors' iconic stadium in Buenos Aires."
-  },
-  {
-    category: "clubs",
-    difficulty: "Elite",
-    question: "Which club completed a continental treble in 1998-99?",
-    answers: ["Manchester United", "Barcelona", "AC Milan", "Bayern Munich"],
-    correct: 0,
-    fact: "Manchester United won the league, FA Cup, and Champions League in 1999."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Who is often called CR7?",
-    answers: ["Cristiano Ronaldo", "Carlos Rodriguez", "Cafu", "Claude Makelele"],
-    correct: 0,
-    fact: "CR7 combines Cristiano Ronaldo's initials with his famous number."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Which country did Lionel Messi represent when winning the 2022 World Cup?",
-    answers: ["Spain", "Argentina", "Portugal", "Uruguay"],
-    correct: 1,
-    fact: "Messi captained Argentina to the 2022 World Cup title."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Which position is mainly responsible for stopping shots on goal?",
-    answers: ["Winger", "Goalkeeper", "Striker", "Midfielder"],
-    correct: 1,
-    fact: "The goalkeeper is the only player who can use hands in their own penalty area."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Which player is known as The Egyptian King by Liverpool fans?",
-    answers: ["Mohamed Salah", "Sadio Mane", "Riyad Mahrez", "Achraf Hakimi"],
-    correct: 0,
-    fact: "Mohamed Salah became a Liverpool star after joining in 2017."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Which Brazilian forward was famous for the number 10 shirt and joyful skill?",
-    answers: ["Ronaldinho", "Fabinho", "Dida", "Casemiro"],
-    correct: 0,
-    fact: "Ronaldinho was known for creativity, tricks, and flair."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Which player is known for the celebration called the SIU?",
-    answers: ["Cristiano Ronaldo", "Kylian Mbappe", "Erling Haaland", "Harry Kane"],
-    correct: 0,
-    fact: "Ronaldo's jump-and-shout celebration became famous worldwide."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Which Norwegian striker became famous for scoring lots of goals for Manchester City?",
-    answers: ["Martin Odegaard", "Erling Haaland", "Joshua King", "Alexander Sorloth"],
-    correct: 1,
-    fact: "Erling Haaland is known for speed, power, and finishing."
-  },
-  {
-    category: "players",
-    difficulty: "Starter",
-    question: "Which French forward is known for his explosive pace and played for PSG?",
-    answers: ["Kylian Mbappe", "Antoine Griezmann", "Olivier Giroud", "N'Golo Kante"],
-    correct: 0,
-    fact: "Mbappe became one of the world's fastest and most dangerous forwards."
-  },
-  {
-    category: "players",
-    difficulty: "Pro",
-    question: "Which goalkeeper was nicknamed The Black Spider?",
-    answers: ["Manuel Neuer", "Gianluigi Buffon", "Lev Yashin", "Hugo Lloris"],
-    correct: 2,
-    fact: "Lev Yashin is the only goalkeeper to win the Ballon d'Or."
-  },
-  {
-    category: "players",
-    difficulty: "Pro",
-    question: "Which country did Marta, one of football's greatest forwards, represent?",
-    answers: ["Brazil", "Spain", "Canada", "France"],
-    correct: 0,
-    fact: "Marta became a global icon for Brazil and women's football."
-  },
-  {
-    category: "players",
-    difficulty: "Pro",
-    question: "Which midfielder was known as The Magician and starred for Barcelona and Spain?",
-    answers: ["Andres Iniesta", "Gerard Pique", "Fernando Torres", "Iker Casillas"],
-    correct: 0,
-    fact: "Iniesta scored Spain's winning goal in the 2010 World Cup final."
-  },
-  {
-    category: "players",
-    difficulty: "Pro",
-    question: "Which striker holds England's men's national team scoring record as of 2024?",
-    answers: ["Wayne Rooney", "Harry Kane", "Gary Lineker", "Alan Shearer"],
-    correct: 1,
-    fact: "Harry Kane passed Wayne Rooney's England record."
-  },
-  {
-    category: "players",
-    difficulty: "Pro",
-    question: "Which player won the Ballon d'Or in 2018, breaking a long Messi-Ronaldo run?",
-    answers: ["Luka Modric", "Neymar", "Robert Lewandowski", "Sergio Ramos"],
-    correct: 0,
-    fact: "Modric won after starring for Real Madrid and Croatia."
-  },
-  {
-    category: "players",
-    difficulty: "Pro",
-    question: "Which Spanish goalkeeper captained Spain during their 2010 World Cup win?",
-    answers: ["David de Gea", "Iker Casillas", "Pepe Reina", "Victor Valdes"],
-    correct: 1,
-    fact: "Casillas lifted the World Cup trophy for Spain in 2010."
-  },
-  {
-    category: "players",
-    difficulty: "Pro",
-    question: "Which defender is famous for captaining Italy and playing for Juventus for many years?",
-    answers: ["Giorgio Chiellini", "Marco Verratti", "Lorenzo Insigne", "Ciro Immobile"],
-    correct: 0,
-    fact: "Chiellini was known for leadership and tough defending."
-  },
-  {
-    category: "players",
-    difficulty: "Elite",
-    question: "Which player scored the Hand of God goal in 1986?",
-    answers: ["Diego Maradona", "Pele", "Zico", "Michel Platini"],
-    correct: 0,
-    fact: "Maradona scored the controversial goal against England."
-  },
-  {
-    category: "players",
-    difficulty: "Elite",
-    question: "Which Germany striker is the men's World Cup all-time top scorer?",
-    answers: ["Miroslav Klose", "Gerd Muller", "Thomas Muller", "Jurgen Klinsmann"],
-    correct: 0,
-    fact: "Miroslav Klose scored 16 men's World Cup goals."
-  },
-  {
-    category: "players",
-    difficulty: "Elite",
-    question: "Which United States player scored in five different Women's World Cups?",
-    answers: ["Mia Hamm", "Abby Wambach", "Megan Rapinoe", "Carli Lloyd"],
-    correct: 2,
-    fact: "Megan Rapinoe scored in five different Women's World Cups."
-  },
-  {
-    category: "players",
-    difficulty: "Elite",
-    question: "Which player is nicknamed Il Fenomeno?",
-    answers: ["Ronaldo Nazario", "Romario", "Rivaldo", "Roberto Carlos"],
-    correct: 0,
-    fact: "Ronaldo Nazario was known as The Phenomenon."
-  },
-  {
-    category: "players",
-    difficulty: "Elite",
-    question: "Which midfielder was famous for free kicks and wore number 21 for Italy?",
-    answers: ["Andrea Pirlo", "Gennaro Gattuso", "Daniele De Rossi", "Claudio Marchisio"],
-    correct: 0,
-    fact: "Pirlo was known for calm passing and set-piece skill."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "Which nation won the 2022 men's FIFA World Cup?",
-    answers: ["France", "Argentina", "Croatia", "Morocco"],
-    correct: 1,
-    fact: "Argentina beat France in a dramatic final in Qatar."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "Which tournament is awarded to the best clubs in Europe each season?",
-    answers: ["Copa America", "UEFA Champions League", "Gold Cup", "AFC Asian Cup"],
-    correct: 1,
-    fact: "The Champions League is Europe's top annual club competition."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "How often is the FIFA World Cup usually held?",
-    answers: ["Every year", "Every two years", "Every four years", "Every six years"],
-    correct: 2,
-    fact: "The World Cup is usually played every four years."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "Which continent's top national-team tournament is called Copa America?",
-    answers: ["Europe", "South America", "Asia", "Africa"],
-    correct: 1,
-    fact: "Copa America is South America's major national-team competition."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "Which tournament crowns the champion of European national teams?",
-    answers: ["UEFA Euro", "Copa Libertadores", "Gold Cup", "Club World Cup"],
-    correct: 0,
-    fact: "The UEFA European Championship is often called the Euros."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "Which competition is South America's top club tournament?",
-    answers: ["Copa Libertadores", "FA Cup", "Europa League", "Leagues Cup"],
-    correct: 0,
-    fact: "Copa Libertadores is South America's premier club competition."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "Which English knockout tournament is the oldest national football competition?",
-    answers: ["FA Cup", "League Cup", "Community Shield", "EFL Trophy"],
-    correct: 0,
-    fact: "The FA Cup began in the 19th century."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Starter",
-    question: "Which tournament is played by national teams in Africa?",
-    answers: ["AFCON", "AFC Asian Cup", "Gold Cup", "Nations League"],
-    correct: 0,
-    fact: "AFCON stands for Africa Cup of Nations."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Pro",
-    question: "Which country won the 2010 men's World Cup?",
-    answers: ["Netherlands", "Spain", "Germany", "Brazil"],
-    correct: 1,
-    fact: "Spain beat the Netherlands in extra time in the 2010 final."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Pro",
-    question: "Which country hosted the 2014 men's World Cup?",
-    answers: ["South Africa", "Brazil", "Russia", "Germany"],
-    correct: 1,
-    fact: "Brazil hosted the 2014 men's World Cup."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Pro",
-    question: "Which nation won the 2019 Women's World Cup?",
-    answers: ["United States", "Netherlands", "Germany", "Japan"],
-    correct: 0,
-    fact: "The United States beat the Netherlands in the 2019 final."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Pro",
-    question: "Which club competition is one level below the Champions League in UEFA's structure?",
-    answers: ["Europa League", "Nations League", "FA Cup", "Copa del Rey"],
-    correct: 0,
-    fact: "The Europa League is a major UEFA club competition."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Pro",
-    question: "Which team won Euro 2016?",
-    answers: ["France", "Portugal", "Germany", "Wales"],
-    correct: 1,
-    fact: "Portugal beat France in the Euro 2016 final."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Pro",
-    question: "Which national-team tournament is contested by North, Central America, and Caribbean teams?",
-    answers: ["Gold Cup", "Copa America", "Euro", "AFCON"],
-    correct: 0,
-    fact: "The CONCACAF Gold Cup is the region's main national-team tournament."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Pro",
-    question: "Which club won the 2023 UEFA Champions League?",
-    answers: ["Manchester City", "Inter Milan", "Real Madrid", "Bayern Munich"],
-    correct: 0,
-    fact: "Manchester City beat Inter Milan in the 2023 final."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Elite",
-    question: "Which country won the first men's FIFA World Cup in 1930?",
-    answers: ["Uruguay", "Brazil", "Argentina", "Italy"],
-    correct: 0,
-    fact: "Uruguay hosted and won the first men's World Cup."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Elite",
-    question: "Which team won the first Women's World Cup in 1991?",
-    answers: ["Norway", "United States", "Germany", "China"],
-    correct: 1,
-    fact: "The United States won the first Women's World Cup."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Elite",
-    question: "Which club has won the most UEFA Champions League titles?",
-    answers: ["Real Madrid", "AC Milan", "Liverpool", "Bayern Munich"],
-    correct: 0,
-    fact: "Real Madrid is the most successful club in Champions League history."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Elite",
-    question: "Which country won back-to-back men's World Cups in 1958 and 1962?",
-    answers: ["Brazil", "Italy", "Germany", "Argentina"],
-    correct: 0,
-    fact: "Brazil won the 1958 and 1962 men's World Cups."
-  },
-  {
-    category: "tournaments",
-    difficulty: "Elite",
-    question: "Which final did Liverpool famously win after trailing AC Milan 3-0 at halftime?",
-    answers: ["2005 Champions League final", "1999 Champions League final", "2012 FA Cup final", "2016 Europa League final"],
-    correct: 0,
-    fact: "The 2005 final in Istanbul is one of football's greatest comebacks."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "How many players does a soccer team usually start with on the field?",
-    answers: ["9", "10", "11", "12"],
-    correct: 2,
-    fact: "A standard team starts with 11 players, including one goalkeeper."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "What color card means a player is sent off?",
-    answers: ["Blue", "Yellow", "Green", "Red"],
-    correct: 3,
-    fact: "A red card means the player leaves the match."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "What color card is a warning?",
-    answers: ["Yellow", "Red", "Purple", "Black"],
-    correct: 0,
-    fact: "A yellow card is a caution."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "What restarts play after the ball fully crosses the sideline?",
-    answers: ["Throw-in", "Corner kick", "Goal kick", "Penalty kick"],
-    correct: 0,
-    fact: "A throw-in is used when the ball crosses the touchline."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "What happens when the ball fully crosses the goal line between the posts and under the bar?",
-    answers: ["A goal", "A corner", "A throw-in", "A free kick"],
-    correct: 0,
-    fact: "The whole ball must cross the goal line for a goal."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "Who can usually use their hands inside their own penalty area?",
-    answers: ["Any defender", "Only the goalkeeper", "Only the captain", "Any striker"],
-    correct: 1,
-    fact: "The goalkeeper has special handling privileges in their own penalty area."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "How long is a standard senior soccer match, not including added time?",
-    answers: ["60 minutes", "70 minutes", "80 minutes", "90 minutes"],
-    correct: 3,
-    fact: "A standard match is two 45-minute halves."
-  },
-  {
-    category: "rules",
-    difficulty: "Starter",
-    question: "Where is a penalty kick taken from?",
-    answers: ["The center circle", "The penalty spot", "The corner arc", "The halfway line"],
-    correct: 1,
-    fact: "Penalty kicks are taken from the penalty spot."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "A player is offside only when they are involved in active play and are closer to goal than the ball and the second-last defender. What else must be true?",
-    answers: ["They are in their own half", "They receive the ball from a teammate", "They are taking a corner", "They are the goalkeeper"],
-    correct: 1,
-    fact: "Offside is judged when a teammate plays or touches the ball."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "What restart is awarded when the attacking team last touches the ball before it crosses the defending team's goal line without a goal?",
-    answers: ["Goal kick", "Corner kick", "Penalty kick", "Drop ball"],
-    correct: 0,
-    fact: "A goal kick restarts play for the defending team."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "What restart is awarded when the defending team last touches the ball before it crosses its own goal line without a goal?",
-    answers: ["Goal kick", "Corner kick", "Throw-in", "Kickoff"],
-    correct: 1,
-    fact: "A corner kick is awarded to the attacking team."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "Can a player be offside directly from a corner kick?",
-    answers: ["Yes", "No", "Only the goalkeeper", "Only in extra time"],
-    correct: 1,
-    fact: "There is no offside directly from a corner kick."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "Can a player be offside directly from a throw-in?",
-    answers: ["Yes", "No", "Only in the penalty area", "Only after halftime"],
-    correct: 1,
-    fact: "There is no offside directly from a throw-in."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "What does VAR stand for?",
-    answers: ["Video Assistant Referee", "Virtual Attack Review", "Verified Advantage Rule", "Video Angle Replay"],
-    correct: 0,
-    fact: "VAR means Video Assistant Referee."
-  },
-  {
-    category: "rules",
-    difficulty: "Pro",
-    question: "How far must opponents usually be from the ball at a free kick?",
-    answers: ["5 yards", "7 yards", "10 yards", "15 yards"],
-    correct: 2,
-    fact: "Opponents are normally required to be at least 10 yards away."
-  },
-  {
-    category: "rules",
-    difficulty: "Elite",
-    question: "What is DOGSO in referee language?",
-    answers: ["Denying an obvious goal-scoring opportunity", "Dropping out of game shape only", "Defending outside goal-side order", "Double offense goal shot option"],
-    correct: 0,
-    fact: "DOGSO can lead to a red card depending on the situation."
-  },
-  {
-    category: "rules",
-    difficulty: "Elite",
-    question: "If the ball hits the referee and starts a promising attack, what is the restart?",
-    answers: ["Dropped ball", "Throw-in", "Penalty kick", "Corner kick"],
-    correct: 0,
-    fact: "A dropped ball is used in certain referee-contact situations."
-  },
-  {
-    category: "rules",
-    difficulty: "Elite",
-    question: "What is the minimum number of players a team generally needs to continue a match?",
-    answers: ["5", "6", "7", "8"],
-    correct: 2,
-    fact: "A match cannot usually continue if a team has fewer than seven players."
-  },
-  {
-    category: "rules",
-    difficulty: "Elite",
-    question: "Can a goal be scored directly from a kickoff?",
-    answers: ["Yes", "No", "Only by the captain", "Only in extra time"],
-    correct: 0,
-    fact: "The laws allow a goal directly from a kickoff against the opponents."
-  },
-  {
-    category: "rules",
-    difficulty: "Elite",
-    question: "What is advantage in soccer?",
-    answers: ["Letting play continue when the fouled team benefits", "Giving the home team the ball", "Adding an extra player", "Skipping halftime"],
-    correct: 0,
-    fact: "Referees can play advantage when stopping play would hurt the fouled team."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "What is a hat trick?",
-    answers: ["Three goals by one player", "Three saves in a row", "Winning three trophies", "Three yellow cards"],
-    correct: 0,
-    fact: "A hat trick is three goals by the same player in one match."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "Which country is strongly associated with samba style football?",
-    answers: ["Brazil", "Germany", "Sweden", "Canada"],
-    correct: 0,
-    fact: "Brazil is famous for flair, rhythm, and attacking stars."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "Which country has won the men's World Cup the most times?",
-    answers: ["Brazil", "Germany", "Italy", "Argentina"],
-    correct: 0,
-    fact: "Brazil has won the men's World Cup five times."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "Which number is often linked with classic playmakers?",
-    answers: ["1", "5", "10", "99"],
-    correct: 2,
-    fact: "The number 10 is often linked with creative attacking players."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "Which country is Pele most associated with?",
-    answers: ["Brazil", "Portugal", "Spain", "Mexico"],
-    correct: 0,
-    fact: "Pele starred for Brazil and Santos."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "Which trophy is awarded to the men's World Cup winner?",
-    answers: ["FIFA World Cup Trophy", "Stanley Cup", "Vince Lombardi Trophy", "Claret Jug"],
-    correct: 0,
-    fact: "The FIFA World Cup Trophy is awarded to the champion."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "Which sport uses terms like pitch, goal, and corner kick?",
-    answers: ["Soccer", "Baseball", "Tennis", "Golf"],
-    correct: 0,
-    fact: "Those are common soccer terms."
-  },
-  {
-    category: "history",
-    difficulty: "Starter",
-    question: "Which country hosted the 1994 men's World Cup?",
-    answers: ["United States", "France", "Japan", "Italy"],
-    correct: 0,
-    fact: "The United States hosted the 1994 men's World Cup."
-  },
-  {
-    category: "history",
-    difficulty: "Pro",
-    question: "Which team was known as The Invincibles in the 2003-04 Premier League?",
-    answers: ["Arsenal", "Chelsea", "Manchester United", "Liverpool"],
-    correct: 0,
-    fact: "Arsenal went unbeaten in the 2003-04 Premier League season."
-  },
-  {
-    category: "history",
-    difficulty: "Pro",
-    question: "Which country won the men's World Cup on home soil in 1998?",
-    answers: ["France", "Brazil", "Italy", "Germany"],
-    correct: 0,
-    fact: "France beat Brazil in the 1998 final."
-  },
-  {
-    category: "history",
-    difficulty: "Pro",
-    question: "Which club did David Beckham play for before joining Real Madrid?",
-    answers: ["Manchester United", "Chelsea", "Arsenal", "Leeds United"],
-    correct: 0,
-    fact: "Beckham came through Manchester United's academy."
-  },
-  {
-    category: "history",
-    difficulty: "Pro",
-    question: "Which national team was nicknamed La Roja and won Euro 2008, World Cup 2010, and Euro 2012?",
-    answers: ["Spain", "Chile", "Portugal", "Belgium"],
-    correct: 0,
-    fact: "Spain dominated international football during that run."
-  },
-  {
-    category: "history",
-    difficulty: "Pro",
-    question: "Which player scored a famous volley in the 2002 Champions League final for Real Madrid?",
-    answers: ["Zinedine Zidane", "Raul", "Luis Figo", "Roberto Carlos"],
-    correct: 0,
-    fact: "Zidane's left-foot volley is one of the final's most iconic goals."
-  },
-  {
-    category: "history",
-    difficulty: "Pro",
-    question: "Which country won the 2006 men's World Cup?",
-    answers: ["Italy", "France", "Germany", "Portugal"],
-    correct: 0,
-    fact: "Italy beat France on penalties in the 2006 final."
-  },
-  {
-    category: "history",
-    difficulty: "Pro",
-    question: "Which club rivalry is known as El Clasico?",
-    answers: ["Real Madrid vs Barcelona", "Liverpool vs Everton", "Milan vs Inter", "Boca vs River"],
-    correct: 0,
-    fact: "El Clasico is one of the world's most watched club rivalries."
-  },
-  {
-    category: "history",
-    difficulty: "Elite",
-    question: "Which national team is known as the Azzurri?",
-    answers: ["Italy", "France", "Argentina", "Netherlands"],
-    correct: 0,
-    fact: "Azzurri means blues, matching Italy's famous blue kit."
-  },
-  {
-    category: "history",
-    difficulty: "Elite",
-    question: "Which famous tactical idea is linked with Dutch football in the 1970s?",
-    answers: ["Total Football", "Catenaccio", "Route One", "Gegenpressing"],
-    correct: 0,
-    fact: "Total Football involved players swapping roles fluidly."
-  },
-  {
-    category: "history",
-    difficulty: "Elite",
-    question: "Which Italian defensive system name means door-bolt?",
-    answers: ["Catenaccio", "Tiki-taka", "Joga Bonito", "Rabona"],
-    correct: 0,
-    fact: "Catenaccio is associated with organized Italian defending."
-  },
-  {
-    category: "history",
-    difficulty: "Elite",
-    question: "Which country suffered the famous 7-1 semifinal loss to Germany in 2014?",
-    answers: ["Brazil", "Argentina", "Spain", "Portugal"],
-    correct: 0,
-    fact: "Germany beat Brazil 7-1 in Belo Horizonte."
-  },
-  {
-    category: "history",
-    difficulty: "Elite",
-    question: "Which club did Lionel Messi join as a teenager after leaving Newell's Old Boys?",
-    answers: ["Barcelona", "Real Madrid", "PSG", "Inter Milan"],
-    correct: 0,
-    fact: "Messi moved to Barcelona's academy as a young player."
+const categoryStores = {
+  clubs: {
+    records: [
+      ["Manchester United", "The Red Devils", "Old Trafford", "England", "Premier League", "Manchester derby"],
+      ["FC Barcelona", "Blaugrana", "Camp Nou", "Spain", "La Liga", "El Clasico"],
+      ["Juventus", "The Old Lady", "Allianz Stadium", "Italy", "Serie A", "Derby d'Italia"],
+      ["Liverpool", "The Reds", "Anfield", "England", "Premier League", "Merseyside derby"],
+      ["Borussia Dortmund", "Die Schwarzgelben", "Signal Iduna Park", "Germany", "Bundesliga", "Revierderby"],
+      ["Arsenal", "The Gunners", "Emirates Stadium", "England", "Premier League", "North London derby"],
+      ["Real Madrid", "Los Blancos", "Santiago Bernabeu", "Spain", "La Liga", "El Clasico"],
+      ["Chelsea", "The Blues", "Stamford Bridge", "England", "Premier League", "West London derby"],
+      ["Atletico Madrid", "Los Colchoneros", "Metropolitano Stadium", "Spain", "La Liga", "Madrid derby"],
+      ["Benfica", "The Eagles", "Estadio da Luz", "Portugal", "Primeira Liga", "Derby de Lisboa"],
+      ["Inter Milan", "Nerazzurri", "San Siro", "Italy", "Serie A", "Derby della Madonnina"],
+      ["Paris Saint-Germain", "Les Parisiens", "Parc des Princes", "France", "Ligue 1", "Le Classique"],
+      ["Bayern Munich", "Die Roten", "Allianz Arena", "Germany", "Bundesliga", "Der Klassiker"],
+      ["Ajax", "de Godenzonen", "Johan Cruyff Arena", "Netherlands", "Eredivisie", "De Klassieker"],
+      ["Celtic", "The Bhoys", "Celtic Park", "Scotland", "Scottish Premiership", "Old Firm"],
+      ["Porto", "Dragoes", "Estadio do Dragao", "Portugal", "Primeira Liga", "O Classico"],
+      ["Boca Juniors", "Xeneizes", "La Bombonera", "Argentina", "Primera Division", "Superclasico"],
+      ["River Plate", "Los Millonarios", "Estadio Monumental", "Argentina", "Primera Division", "Superclasico"],
+      ["AC Milan", "Rossoneri", "San Siro", "Italy", "Serie A", "Derby della Madonnina"],
+      ["Tottenham Hotspur", "Spurs", "Tottenham Hotspur Stadium", "England", "Premier League", "North London derby"]
+    ],
+    fields: ["club", "nickname", "stadium", "country", "league", "rivalry"]
+  },
+  players: {
+    records: [
+      ["Lionel Messi", "Argentina", "Forward", "Inter Miami", "2022 World Cup winner", "La Pulga"],
+      ["Cristiano Ronaldo", "Portugal", "Forward", "Al Nassr", "five-time Ballon d'Or winner", "CR7"],
+      ["Kylian Mbappe", "France", "Forward", "Real Madrid", "2018 World Cup winner", "Donatello"],
+      ["Erling Haaland", "Norway", "Striker", "Manchester City", "Premier League Golden Boot winner", "The Terminator"],
+      ["Mohamed Salah", "Egypt", "Winger", "Liverpool", "Premier League champion", "Egyptian King"],
+      ["Marta", "Brazil", "Forward", "Orlando Pride", "women's football icon", "Queen Marta"],
+      ["Alexia Putellas", "Spain", "Midfielder", "Barcelona", "Ballon d'Or Feminin winner", "La Reina"],
+      ["Aitana Bonmati", "Spain", "Midfielder", "Barcelona", "World Cup and Ballon d'Or winner", "midfield maestro"],
+      ["Neymar", "Brazil", "Forward", "Santos", "Champions League winner", "Ney"],
+      ["Luka Modric", "Croatia", "Midfielder", "Real Madrid", "2018 Ballon d'Or winner", "midfield magician"],
+      ["Kevin De Bruyne", "Belgium", "Midfielder", "Manchester City", "Premier League playmaker", "KDB"],
+      ["Harry Kane", "England", "Striker", "Bayern Munich", "England men's record scorer", "Hurricane"],
+      ["Virgil van Dijk", "Netherlands", "Defender", "Liverpool", "Champions League winner", "VVD"],
+      ["Gianluigi Buffon", "Italy", "Goalkeeper", "Parma", "2006 World Cup winner", "Gigi"],
+      ["Iker Casillas", "Spain", "Goalkeeper", "Real Madrid", "2010 World Cup captain", "San Iker"],
+      ["Ronaldinho", "Brazil", "Attacking midfielder", "Barcelona", "2005 Ballon d'Or winner", "O Bruxo"],
+      ["Ronaldo Nazario", "Brazil", "Striker", "Real Madrid", "two-time World Cup winner", "Il Fenomeno"],
+      ["Zinedine Zidane", "France", "Midfielder", "Real Madrid", "1998 World Cup winner", "Zizou"],
+      ["Mia Hamm", "United States", "Forward", "Washington Freedom", "Women's World Cup winner", "USWNT legend"],
+      ["Megan Rapinoe", "United States", "Winger", "OL Reign", "2019 Women's World Cup star", "Pinoe"]
+    ],
+    fields: ["player", "country", "position", "club", "achievement", "nickname"]
+  },
+  tournaments: {
+    records: [
+      ["FIFA World Cup", "world", "national teams", "every four years", "World Cup Trophy", "Uruguay"],
+      ["UEFA Champions League", "Europe", "clubs", "every season", "European Cup", "Real Madrid"],
+      ["UEFA Euro", "Europe", "national teams", "every four years", "Henri Delaunay Trophy", "Spain"],
+      ["Copa America", "South America", "national teams", "usually every four years", "Copa America trophy", "Uruguay"],
+      ["Africa Cup of Nations", "Africa", "national teams", "every two years", "AFCON trophy", "Egypt"],
+      ["AFC Asian Cup", "Asia", "national teams", "every four years", "Asian Cup trophy", "Japan"],
+      ["CONCACAF Gold Cup", "North America", "national teams", "every two years", "Gold Cup trophy", "Mexico"],
+      ["Copa Libertadores", "South America", "clubs", "every season", "Libertadores trophy", "Independiente"],
+      ["Europa League", "Europe", "clubs", "every season", "Europa League trophy", "Sevilla"],
+      ["FA Cup", "England", "clubs", "every season", "FA Cup trophy", "Arsenal"],
+      ["Copa del Rey", "Spain", "clubs", "every season", "Copa del Rey trophy", "Barcelona"],
+      ["DFB-Pokal", "Germany", "clubs", "every season", "DFB-Pokal trophy", "Bayern Munich"],
+      ["Coppa Italia", "Italy", "clubs", "every season", "Coppa Italia trophy", "Juventus"],
+      ["FIFA Women's World Cup", "world", "national teams", "every four years", "Women's World Cup Trophy", "United States"],
+      ["Olympic football tournament", "world", "national teams", "every four years", "Olympic gold medal", "Brazil"],
+      ["Club World Cup", "world", "clubs", "periodically", "Club World Cup trophy", "Real Madrid"],
+      ["Nations League", "Europe", "national teams", "every two years", "Nations League trophy", "Portugal"],
+      ["Leagues Cup", "North America", "clubs", "every season", "Leagues Cup trophy", "Inter Miami"],
+      ["U.S. Open Cup", "United States", "clubs", "every season", "Dewar Challenge Trophy", "Bethlehem Steel"],
+      ["Community Shield", "England", "clubs", "every season", "Community Shield", "Manchester United"]
+    ],
+    fields: ["tournament", "region", "participants", "frequency", "prize", "recordTeam"]
+  },
+  rules: {
+    records: [
+      ["Offside", "A player is penalized when involved in active play from an offside position", "indirect free kick", "positioning", "no offside from a throw-in", "watch the second-last defender"],
+      ["Red card", "A player is sent off and their team plays short", "direct free kick or penalty if tied to a foul", "discipline", "serious foul play can cause it", "leave the field"],
+      ["Yellow card", "A player receives a caution", "free kick if play was stopped for the offense", "discipline", "two yellows become a red", "warning"],
+      ["Throw-in", "The ball fully crosses the touchline", "throw-in", "restart", "both feet should stay on or behind the line", "use both hands"],
+      ["Corner kick", "The defending team last touched the ball before it crossed its own goal line without a goal", "corner kick", "restart", "no offside directly from it", "taken from the corner arc"],
+      ["Goal kick", "The attacking team last touched the ball before it crossed the defending goal line without a goal", "goal kick", "restart", "the ball is in play when kicked and clearly moves", "defending team restarts"],
+      ["Penalty kick", "A direct-free-kick foul by defenders in their own penalty area", "penalty kick", "restart", "taken from the penalty spot", "goalkeeper stays on the line"],
+      ["Direct free kick", "A restart that can score directly against the opponents", "direct free kick", "restart", "used for many contact fouls", "can be a shot"],
+      ["Indirect free kick", "A restart that must touch another player before a goal counts", "indirect free kick", "restart", "the referee raises an arm", "needs a second touch"],
+      ["Dropped ball", "Used for certain stoppages when no team has committed an offense", "dropped ball", "restart", "often returned to the team that last had possession", "neutral restart"],
+      ["Handball", "Illegal hand or arm contact with the ball", "direct free kick or penalty", "foul", "context and arm position matter", "not every touch is a foul"],
+      ["Advantage", "The referee lets play continue because stopping would hurt the fouled team", "play continues", "referee decision", "can be brought back if advantage does not develop", "keep attacking"],
+      ["VAR", "Video officials review clear and obvious errors in major incidents", "review decision", "technology", "used for goals, penalties, red cards, and mistaken identity", "Video Assistant Referee"],
+      ["Substitution", "A team replaces one player with another", "play restarts from the original restart", "team management", "the departing player should leave promptly", "fresh player enters"],
+      ["Kickoff", "Starts each half and restarts after a goal", "kickoff", "restart", "a goal can be scored directly from it", "taken from the center mark"],
+      ["Added time", "Extra time added for stoppages during a half", "continued play", "timekeeping", "announced near the end of each half", "referee tracks it"],
+      ["DOGSO", "Denying an obvious goal-scoring opportunity", "direct free kick or penalty", "discipline", "can produce a red card", "major attacking chance denied"],
+      ["Back-pass rule", "A goalkeeper cannot handle a deliberate kick from a teammate", "indirect free kick", "goalkeeper rule", "does not apply to headers from teammates", "feet to keeper matters"],
+      ["Encroachment", "Players enter a required area too early at a restart", "retake or indirect free kick depending on outcome", "restart management", "common on penalties", "wait for the kick"],
+      ["Ball out of play", "The whole ball fully crosses a boundary line", "restart based on where it left", "boundary", "the whole ball must cross the whole line", "line belongs to the field"]
+    ],
+    fields: ["term", "definition", "restart", "topic", "detail", "tip"]
+  },
+  history: {
+    records: [
+      ["1930", "Uruguay won the first men's World Cup", "Uruguay", "FIFA World Cup", "Montevideo", "first champions"],
+      ["1958", "Pele starred as Brazil won the World Cup", "Brazil", "FIFA World Cup", "Sweden", "teenage superstar"],
+      ["1966", "England won the World Cup at Wembley", "England", "FIFA World Cup", "London", "home triumph"],
+      ["1970", "Brazil produced one of football's most famous teams", "Brazil", "FIFA World Cup", "Mexico", "Jogo Bonito"],
+      ["1986", "Maradona scored the Hand of God and Goal of the Century", "Argentina", "FIFA World Cup", "Mexico", "Maradona magic"],
+      ["1991", "The United States won the first Women's World Cup", "United States", "Women's World Cup", "China", "women's football milestone"],
+      ["1994", "The United States hosted the men's World Cup", "United States", "FIFA World Cup", "USA", "record crowds"],
+      ["1998", "France won the World Cup on home soil", "France", "FIFA World Cup", "Paris", "Zidane final"],
+      ["1999", "Manchester United completed a treble", "Manchester United", "Champions League", "Barcelona", "late comeback"],
+      ["2002", "Brazil won its fifth men's World Cup", "Brazil", "FIFA World Cup", "Japan and South Korea", "Ronaldo redemption"],
+      ["2005", "Liverpool completed the Miracle of Istanbul", "Liverpool", "Champions League", "Istanbul", "3-0 comeback"],
+      ["2006", "Italy won the World Cup on penalties", "Italy", "FIFA World Cup", "Berlin", "Azzurri victory"],
+      ["2008", "Spain began its golden international run", "Spain", "UEFA Euro", "Austria and Switzerland", "tiki-taka era"],
+      ["2010", "Spain won its first men's World Cup", "Spain", "FIFA World Cup", "South Africa", "Iniesta winner"],
+      ["2012", "Chelsea won its first Champions League", "Chelsea", "Champions League", "Munich", "penalty shootout"],
+      ["2014", "Germany beat Brazil 7-1 in a World Cup semifinal", "Germany", "FIFA World Cup", "Belo Horizonte", "historic shock"],
+      ["2015", "The United States won the Women's World Cup", "United States", "Women's World Cup", "Canada", "Carli Lloyd hat trick"],
+      ["2016", "Portugal won Euro 2016", "Portugal", "UEFA Euro", "France", "extra-time winner"],
+      ["2019", "The United States won another Women's World Cup", "United States", "Women's World Cup", "France", "dominant campaign"],
+      ["2022", "Argentina won the World Cup in Qatar", "Argentina", "FIFA World Cup", "Qatar", "Messi triumph"]
+    ],
+    fields: ["year", "event", "team", "competition", "place", "tag"]
   }
-];
+};
+
+window.questionBank = Object.entries(categoryStores).flatMap(([category, store]) =>
+  buildCategoryQuestions(category, store.records.map((record) => objectFromRecord(store.fields, record)))
+);
+
+function buildCategoryQuestions(category, records) {
+  const builders = {
+    clubs: buildClubQuestions,
+    players: buildPlayerQuestions,
+    tournaments: buildTournamentQuestions,
+    rules: buildRuleQuestions,
+    history: buildHistoryQuestions
+  };
+
+  return records.flatMap((record) => builders[category](record, records));
+}
+
+function buildClubQuestions(record, records) {
+  return [
+    question("clubs", "Starter", `Which club is nicknamed ${record.nickname}?`, record.club, choices(records, "club", record.club), `${record.club} is known as ${record.nickname}.`),
+    question("clubs", "Starter", `Which club plays at ${record.stadium}?`, record.club, choices(records, "club", record.club), `${record.stadium} is home to ${record.club}.`),
+    question("clubs", "Starter", `Which country is ${record.club} from?`, record.country, choices(records, "country", record.country), `${record.club} is based in ${record.country}.`),
+    question("clubs", "Pro", `Which league does ${record.club} play in?`, record.league, choices(records, "league", record.league), `${record.club} competes in ${record.league}.`),
+    question("clubs", "Pro", `Which rivalry is connected to ${record.club}?`, record.rivalry, choices(records, "rivalry", record.rivalry), `${record.club} is connected with the ${record.rivalry}.`),
+    question("clubs", "Elite", `Which stadium would you visit to watch ${record.club} at home?`, record.stadium, choices(records, "stadium", record.stadium), `${record.club} plays home matches at ${record.stadium}.`)
+  ];
+}
+
+function buildPlayerQuestions(record, records) {
+  return [
+    question("players", "Starter", `Which country does ${record.player} represent?`, record.country, choices(records, "country", record.country), `${record.player} represents ${record.country}.`),
+    question("players", "Starter", `What position is ${record.player} best known for?`, record.position, choices(records, "position", record.position), `${record.player} is best known as a ${record.position}.`),
+    question("players", "Starter", `Which player is nicknamed ${record.nickname}?`, record.player, choices(records, "player", record.player), `${record.nickname} refers to ${record.player}.`),
+    question("players", "Pro", `Which club is listed with ${record.player} in this quiz bank?`, record.club, choices(records, "club", record.club), `${record.player} is listed with ${record.club}.`),
+    question("players", "Pro", `Which achievement is connected to ${record.player}?`, record.achievement, choices(records, "achievement", record.achievement), `${record.player} is connected to: ${record.achievement}.`),
+    question("players", "Elite", `Which player matches this clue: ${record.country} ${record.position}, ${record.nickname}?`, record.player, choices(records, "player", record.player), `The clue points to ${record.player}.`)
+  ];
+}
+
+function buildTournamentQuestions(record, records) {
+  return [
+    question("tournaments", "Starter", `Which region is most connected to ${record.tournament}?`, record.region, choices(records, "region", record.region), `${record.tournament} is connected to ${record.region}.`),
+    question("tournaments", "Starter", `Who competes in ${record.tournament}?`, record.participants, choices(records, "participants", record.participants), `${record.tournament} is for ${record.participants}.`),
+    question("tournaments", "Starter", `How often is ${record.tournament} usually played?`, record.frequency, choices(records, "frequency", record.frequency), `${record.tournament} is played ${record.frequency}.`),
+    question("tournaments", "Pro", `Which prize is connected to ${record.tournament}?`, record.prize, choices(records, "prize", record.prize), `${record.prize} is connected to ${record.tournament}.`),
+    question("tournaments", "Pro", `Which team is listed as a record or famous team for ${record.tournament}?`, record.recordTeam, choices(records, "recordTeam", record.recordTeam), `${record.recordTeam} is strongly connected to ${record.tournament}.`),
+    question("tournaments", "Elite", `Which tournament matches this clue: ${record.region}, ${record.participants}, ${record.frequency}?`, record.tournament, choices(records, "tournament", record.tournament), `The clue points to ${record.tournament}.`)
+  ];
+}
+
+function buildRuleQuestions(record, records) {
+  return [
+    question("rules", "Starter", `Which rule term means: ${record.definition}?`, record.term, choices(records, "term", record.term), `That describes ${record.term}.`),
+    question("rules", "Starter", `What is the usual restart or result for ${record.term}?`, record.restart, choices(records, "restart", record.restart), `${record.term} usually leads to: ${record.restart}.`),
+    question("rules", "Starter", `Which topic does ${record.term} mostly belong to?`, record.topic, choices(records, "topic", record.topic), `${record.term} is a ${record.topic} topic.`),
+    question("rules", "Pro", `Which detail is true about ${record.term}?`, record.detail, choices(records, "detail", record.detail), `For ${record.term}: ${record.detail}.`),
+    question("rules", "Pro", `Which tip helps remember ${record.term}?`, record.tip, choices(records, "tip", record.tip), `A good ${record.term} tip is: ${record.tip}.`),
+    question("rules", "Elite", `Which rule matches this clue: ${record.topic}, ${record.restart}, ${record.tip}?`, record.term, choices(records, "term", record.term), `The clue points to ${record.term}.`)
+  ];
+}
+
+function buildHistoryQuestions(record, records) {
+  return [
+    question("history", "Starter", `In which year did this happen: ${record.event}?`, record.year, choices(records, "year", record.year), `${record.event} happened in ${record.year}.`),
+    question("history", "Starter", `Which team or country is connected to ${record.year}: ${record.event}?`, record.team, choices(records, "team", record.team), `${record.team} is connected to that moment.`),
+    question("history", "Starter", `Which competition featured this moment: ${record.event}?`, record.competition, choices(records, "competition", record.competition), `That moment belongs to ${record.competition}.`),
+    question("history", "Pro", `Where did this football moment happen: ${record.event}?`, record.place, choices(records, "place", record.place), `It happened in ${record.place}.`),
+    question("history", "Pro", `Which tag best describes ${record.year}: ${record.event}?`, record.tag, choices(records, "tag", record.tag), `A good tag is ${record.tag}.`),
+    question("history", "Elite", `Which year matches this clue: ${record.team}, ${record.competition}, ${record.tag}?`, record.year, choices(records, "year", record.year), `The clue points to ${record.year}.`)
+  ];
+}
+
+function question(category, difficulty, prompt, correct, wrong, fact) {
+  return {
+    id: `${category}:${prompt}:${correct}`,
+    category,
+    difficulty,
+    question: prompt,
+    answers: [correct, ...wrong],
+    correct: 0,
+    fact
+  };
+}
+
+function objectFromRecord(fields, record) {
+  return Object.fromEntries(fields.map((field, index) => [field, record[index]]));
+}
+
+function choices(records, field, correct) {
+  const fallbackOptions = [
+    "clubs",
+    "national teams",
+    "players",
+    "goalkeepers only",
+    "every season",
+    "every two years",
+    "every four years",
+    "Europe",
+    "South America",
+    "world",
+    "restart",
+    "discipline",
+    "foul",
+    "technology",
+    "England",
+    "Spain",
+    "Italy",
+    "Germany",
+    "Brazil",
+    "Argentina",
+    "France",
+    "United States"
+  ];
+
+  return [...records.map((record) => record[field]), ...fallbackOptions]
+    .filter((value, index, values) => value && value !== correct && values.indexOf(value) === index)
+    .slice(0, 3);
+}

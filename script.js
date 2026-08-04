@@ -1,5 +1,6 @@
 const questionBank = window.questionBank || [];
 const quizLength = 15;
+const usedQuestionsStorageKey = "ultimateSoccerQuizUsedQuestions";
 
 const state = {
   mode: "mixed",
@@ -9,7 +10,7 @@ const state = {
   bestStreak: 0,
   selectedQuestions: [],
   currentAnswers: [],
-  questionQueues: {}
+  usedQuestionKeys: loadUsedQuestionKeys()
 };
 
 const coverScreen = document.getElementById("cover-screen");
@@ -186,26 +187,50 @@ function getQuestionPool(mode) {
 function takeQuestionsForMode(mode, pool) {
   const count = Math.min(quizLength, pool.length);
   const selected = [];
+  const used = new Set(state.usedQuestionKeys[mode] || []);
+  let available = shuffle(pool.filter((item) => !used.has(getQuestionKey(item))));
 
-  if (!state.questionQueues[mode]) {
-    state.questionQueues[mode] = shuffle(pool);
+  while (selected.length < count && available.length > 0) {
+    selected.push(available.shift());
   }
 
-  while (selected.length < count) {
-    if (state.questionQueues[mode].length === 0) {
-      const selectedKeys = new Set(selected.map(getQuestionKey));
-      const refillPool = pool.filter((item) => !selectedKeys.has(getQuestionKey(item)));
-      state.questionQueues[mode] = shuffle(refillPool.length > 0 ? refillPool : pool);
+  if (selected.length < count) {
+    const selectedKeys = new Set(selected.map(getQuestionKey));
+    state.usedQuestionKeys[mode] = [];
+    available = shuffle(pool.filter((item) => !selectedKeys.has(getQuestionKey(item))));
+
+    while (selected.length < count && available.length > 0) {
+      selected.push(available.shift());
     }
-
-    selected.push(state.questionQueues[mode].shift());
   }
+
+  state.usedQuestionKeys[mode] = [
+    ...(state.usedQuestionKeys[mode] || []),
+    ...selected.map(getQuestionKey)
+  ];
+  saveUsedQuestionKeys();
 
   return selected;
 }
 
 function getQuestionKey(item) {
-  return `${item.category}:${item.question}`;
+  return item.id || `${item.category}:${item.question}`;
+}
+
+function loadUsedQuestionKeys() {
+  try {
+    return JSON.parse(localStorage.getItem(usedQuestionsStorageKey)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveUsedQuestionKeys() {
+  try {
+    localStorage.setItem(usedQuestionsStorageKey, JSON.stringify(state.usedQuestionKeys));
+  } catch {
+    // The quiz still works if browser storage is unavailable.
+  }
 }
 
 function shuffle(items) {
